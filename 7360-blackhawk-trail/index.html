@@ -7,7 +7,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Helvetica Neue", Arial, sans-serif; color: #23262d;
        background: #f7f3ec; padding: 32px 24px 80px; line-height: 1.5; }
-.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap { max-width: 1280px; margin: 0 auto; }
 .header { text-align: center; margin-bottom: 32px; padding: 28px 24px;
           background: #fff; border-radius: 12px; border: 2px solid #b9954e;
           box-shadow: 0 4px 20px rgba(0,0,0,.06); }
@@ -16,29 +16,34 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; color: #23262d;
 .header h1 { font-family: Georgia, serif; font-size: 22pt; letter-spacing: .04em;
              color: #23262d; font-weight: 700; }
 .header .sub { color: #6f757d; font-size: 11pt; margin-top: 6px; }
-.section { margin-top: 32px; }
-.section h2 { font-family: Georgia, serif; font-size: 16pt; color: #23262d;
+.section { margin-top: 36px; }
+.section h2 { font-family: Georgia, serif; font-size: 17pt; color: #23262d;
               margin-bottom: 14px; padding-bottom: 8px;
               border-bottom: 2px solid #d7c49a; }
-.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-         gap: 18px; }
-.card { background: #fff; border-radius: 10px; overflow: hidden;
-        border: 1px solid #e4ddcf; box-shadow: 0 2px 10px rgba(0,0,0,.04);
-        display: flex; flex-direction: column; }
+.group { background: #fff; border: 1px solid #e4ddcf; border-radius: 10px;
+         padding: 18px; margin-bottom: 22px;
+         box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.group h3 { font-size: 11pt; letter-spacing: .14em; color: #6f757d;
+            text-transform: uppercase; font-weight: 700; margin-bottom: 14px;
+            display: flex; justify-content: space-between; align-items: center; }
+.group h3 .dim { color: #a9852f; font-weight: 600; }
+.themes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 14px; }
+.theme-card { background: #f7f3ec; border: 1px solid #e4ddcf; border-radius: 8px;
+              overflow: hidden; display: flex; flex-direction: column; }
+.theme-card.flyer-card { background: #fff; }
 .thumb { background: #d8d8d8; display: flex; align-items: center;
-         justify-content: center; padding: 16px; min-height: 180px; }
-.thumb img { max-width: 100%; max-height: 240px; display: block;
-             box-shadow: 0 2px 8px rgba(0,0,0,.12); }
-.thumb.flyer { background: #fff; padding: 24px; }
-.thumb.flyer .icon { font-size: 56pt; color: #a9852f; }
-.cardmeta { padding: 14px 16px; flex: 1; display: flex;
-            flex-direction: column; gap: 10px; }
-.cardmeta .label { font-size: 11pt; font-weight: 700; color: #23262d;
-                   letter-spacing: .02em; }
-.cardmeta .dim { font-size: 9pt; color: #6f757d; letter-spacing: .12em;
-                 text-transform: uppercase; }
-.actions { display: flex; gap: 8px; margin-top: auto; }
-.btn { flex: 1; padding: 9px 12px; border-radius: 6px; font-size: 10pt;
+         justify-content: center; padding: 14px; min-height: 160px; }
+.thumb img { max-width: 100%; max-height: 260px; display: block;
+             box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.thumb.flyer { background: #fff; padding: 22px; }
+.thumb.flyer .icon { font-size: 48pt; color: #a9852f; }
+.cardmeta { padding: 12px 14px; flex: 1; display: flex;
+            flex-direction: column; gap: 8px; }
+.theme-label { font-size: 10pt; font-weight: 700; color: #23262d;
+               letter-spacing: .04em; }
+.actions { display: flex; gap: 6px; margin-top: auto; }
+.btn { flex: 1; padding: 8px 10px; border-radius: 5px; font-size: 9pt;
        font-weight: 600; text-decoration: none; text-align: center;
        border: 1px solid #d7c49a; background: #fff; color: #23262d;
        cursor: pointer; transition: background .1s; }
@@ -58,56 +63,130 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; color: #23262d;
     <h1>7360 BLACKHAWK TRAIL - SPRING HILL, FL 34606</h1>
     <div class="sub">Spring Hill · $280,000</div>
   </div>
-  <div class="section"><h2>Open House Flyer</h2><div class="cards">
-<div class="card">
+  
+<div class="section"><h2>Open House Flyer</h2>
+  <div class="group">
+    <h3>Print-ready · 8.5 × 11 in <span class="dim">HTML</span></h3>
+    <div class="themes">
+<div class="theme-card flyer-card">
   <div class="thumb flyer"><div class="icon">⌂</div></div>
   <div class="cardmeta">
-    <div class="label">Open House Flyer</div>
-    <div class="dim">Print HTML</div>
+    <div class="theme-label">Open House Flyer</div>
     <div class="actions">
       <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail-Flyer.html" target="_blank">Open</a>
       <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail-Flyer.html')">Copy URL</button>
     </div>
   </div>
-</div>
 </div></div>
-  <div class="section"><h2>Social posts</h2><div class="cards">
-<div class="card">
-  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square.png" alt="Just Listed" loading="lazy"></div>
+  </div>
+</div>
+  
+<div class="section">
+  <h2>Just Listed</h2>
+  
+<div class="group">
+  <h3>Square (Instagram feed) <span class="dim">1080 × 1080</span></h3>
+  <div class="themes">
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-default.png" alt="Default Gold" loading="lazy"></div>
   <div class="cardmeta">
-    <div class="label">Just Listed</div>
-    <div class="dim">1080 × 1080</div>
+    <div class="theme-label">Default Gold</div>
     <div class="actions">
-      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square.png" target="_blank">Open</a>
-      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square.png')">Copy URL</button>
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-default.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-default.png')">Copy URL</button>
     </div>
   </div>
 </div>
-
-<div class="card">
-  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story.png" alt="Just Listed" loading="lazy"></div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-expertly-sold.png" alt="Expertly Sold" loading="lazy"></div>
   <div class="cardmeta">
-    <div class="label">Just Listed</div>
-    <div class="dim">1080 × 1920</div>
+    <div class="theme-label">Expertly Sold</div>
     <div class="actions">
-      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story.png" target="_blank">Open</a>
-      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story.png')">Copy URL</button>
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-expertly-sold.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-expertly-sold.png')">Copy URL</button>
     </div>
   </div>
 </div>
-
-<div class="card">
-  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape.png" alt="Just Listed" loading="lazy"></div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-team-logo.png" alt="Team Logo" loading="lazy"></div>
   <div class="cardmeta">
-    <div class="label">Just Listed</div>
-    <div class="dim">1200 × 630</div>
+    <div class="theme-label">Team Logo</div>
     <div class="actions">
-      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape.png" target="_blank">Open</a>
-      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape.png')">Copy URL</button>
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-team-logo.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-square-team-logo.png')">Copy URL</button>
     </div>
   </div>
-</div>
 </div></div>
+</div>
+<div class="group">
+  <h3>Story (1080 × 1920) <span class="dim">1080 × 1920</span></h3>
+  <div class="themes">
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-default.png" alt="Default Gold" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Default Gold</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-default.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-default.png')">Copy URL</button>
+    </div>
+  </div>
+</div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-expertly-sold.png" alt="Expertly Sold" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Expertly Sold</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-expertly-sold.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-expertly-sold.png')">Copy URL</button>
+    </div>
+  </div>
+</div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-team-logo.png" alt="Team Logo" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Team Logo</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-team-logo.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-story-team-logo.png')">Copy URL</button>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="group">
+  <h3>Landscape (Facebook link) <span class="dim">1200 × 630</span></h3>
+  <div class="themes">
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-default.png" alt="Default Gold" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Default Gold</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-default.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-default.png')">Copy URL</button>
+    </div>
+  </div>
+</div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-expertly-sold.png" alt="Expertly Sold" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Expertly Sold</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-expertly-sold.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-expertly-sold.png')">Copy URL</button>
+    </div>
+  </div>
+</div>
+<div class="theme-card">
+  <div class="thumb"><img src="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-team-logo.png" alt="Team Logo" loading="lazy"></div>
+  <div class="cardmeta">
+    <div class="theme-label">Team Logo</div>
+    <div class="actions">
+      <a class="btn primary" href="https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-team-logo.png" target="_blank">Open</a>
+      <button class="btn" onclick="copyUrl('https://flyers.joshhanoud.com/7360-blackhawk-trail/just-listed-landscape-team-logo.png')">Copy URL</button>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
 </div>
 <div class="toast" id="toast">Copied to clipboard</div>
 <script>
