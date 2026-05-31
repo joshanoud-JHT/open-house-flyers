@@ -3,6 +3,8 @@
 :root{--gold:#a9852f;--gold2:#b9954e;--goldline:#d7c49a;--ink:#23262d;--muted:#6f757d;--line:#e4ddcf;--cream:#f7f3ec;--comm:#f0e4c8;}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#cfcfcf}
+/* Defensive: every img defaults to aspect-preserving cover crop. */
+img{object-fit:cover}
 @page{size:8.5in 11in;margin:0}
 @media print{html,body{background:#fff}.page{margin:0;box-shadow:none}}
 .page{width:8.5in;height:11in;background:#fff;position:relative;margin:0 auto;overflow:hidden;color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:0 4px 20px rgba(0,0,0,.15)}
